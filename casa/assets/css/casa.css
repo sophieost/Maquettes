@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+}
+
+/* border-sizing nous permet de ne pas modifier la largeur et la hauteur des éléments boite même si on met un padding (pour les colonnes) */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: verdana, geneva, tahoma, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    /* toutes les images ont une taille max qui est celle de leur parent */
+}
+
+
+/****** Mes couleurs en variables *******/
+:root {
+    --blanc: #fff;
+    --gris-clair: #ddd;
+    --gris-transparent: rgba(0, 0, 0, 0.212);
+    --gris: rgb(155, 155, 155);
+    --gris-fonce: rgb(94, 94, 94);
+    --bleu-clair: #c1d2d9;
+    --bleu-fonce: #7bafc9;
+    --orange: orange;
+}
+
+/* *********HEADER********** */
+
+/* ---------NAV----------- */
+
+header {
+    background-image: url("/casa/assets/img/bg.jpg");
+    height: 90vh;
+    /* vh signifie viewport height--> il représente 90% de l'écran de l'utilisateur peu importe la taille de l'écran */
+    background-size: cover;
+    /* on couvre tout notre header */
+    background-position: center;
+    /* on centre l'image */
+    background-repeat: no-repeat;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--gris-transparent);
+}
+
+
+h1 {
+    color: var(--blanc);
+    font-family: 'ephesis', cursive;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanc);
+    border-radius: 30px;
+    padding: 15px 20px;
+    transition: 2s ease;
+}
+
+nav a:hover {
+    background-color: var(--bleu-clair);
+}
+
+nav a:last-of-type {
+    /* pour cibler le dernier c-a-d contact */
+    border: 1px solid;
+}
+
+/* ---------EN-TETE------------ */
+#presentation {
+    color: var(--blanc);
+    text-align: center;
+}
+
+#presentation h2 {
+    font-family: 'ephesis', cursive;
+    font-size: 5em;
+    font-weight: lighter;
+    text-transform: capitalize;
+    margin: 15px 0 0 0;
+}
+
+#presentation p {
+    margin: 0;
+}
+
+/* ********PARTIE RECHERCHE********* */
+
+#recherche {
+    background-color: var(--bleu-clair);
+    color: var(--bleu-fonce);
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#recherche p {
+    font-size: 1.3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#recherche i {
+    font-size: 1.2em;
+}
+
+/* *********MAIN************ */
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.annonce {
+    position: relative;
+    border: 1px solid var(--gris-clair);
+}
+
+.prix {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: var(--blanc);
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.texte {
+    padding: 15px;
+}
+
+.texte h2 {
+    font-size: 1em;
+    color: var(--gris-fonce);
+}
+
+.texte p {
+    font-size: 0.8em;
+    color: var(--gris);
+}
+
+/* *************BUTTON************ */
+.more {
+    text-align: center;
+    height: 70px;
+}
+
+.more button {
+    height: 50px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: 1px solid var(--bleu-fonce);
+    color: var(--bleu-fonce);
+    background-color: transparent;
+    transition: 1s ease;
+}
+
+.more button:hover {
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+    border: 1 px solid var(--blanc);
+}
+
+/* *************FOOTER*************** */
+
+footer {
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+}
+
+footer a {
+    color: var(--blanc);
+    text-decoration: none;
+}
+
+footer p {
+    line-height: 35px;
+}
+
+/* *******ICONES RESEAUX SOCIO********* */
+.bi {
+    padding-right: 25px;
+    font-size: 1.2em;
+}
+
+footer a:hover {
+    color: var(--orange);
+}
+
+footer hr {
+    color: var(--blanc);
+    background-color: var(--blanc);
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+
+
+/* *********RANGEES ET COLONNES****** */
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    width: 8.333333%;
+    padding: 25px;
+}
+
+.col-2 {
+    width: 16.666666%;
+    padding: 25px;
+}
+
+.col-3 {
+    width: 25%;
+    padding: 25px;
+}
+
+.col-4 {
+    width: 33.333333%;
+    padding: 25px;
+}
+
+.col-5 {
+    width: 41.666666%;
+    padding: 25px;
+}
+
+.col-6 {
+    width: 50%;
+    padding: 25px;
+}
+
+.col-7 {
+    width: 58.333333%;
+    padding: 25px;
+}
+
+.col-8 {
+    width: 66.666666%;
+    padding: 25px;
+}
+
+.col-9 {
+    width: 75%;
+    padding: 25px;
+}
+
+.col-10 {
+    width: 83.333333%;
+    padding: 25px;
+}
+
+.col-11 {
+    width: 91.666666%;
+    padding: 25px;
+}
+
+.col-12 {
+    width: 100%;
+    padding: 25px;
+}
+
+/*  *******Media queries******************* */
+@media screen and (max-width:991px) and (min-width:768px) {
+    .col-4 {
+        width: 50%;
+    }
+
+    #navigation {
+        flex-direction: column;
+        height: 130px;
+    }
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    .col-2 {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .col-4 {
+        width: 100%;
+    }
+
+    #navigation {
+        flex-direction: column;
+        height: 130px;
+    }
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    .col-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+
+
+}
+
+
+/*  CASA ----> MEDIA QUERIES */
+/* Pour smartphone max = 767px */
+/* tablette entre 768px et 991px */
